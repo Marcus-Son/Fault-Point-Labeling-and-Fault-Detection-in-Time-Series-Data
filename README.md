@@ -32,6 +32,8 @@
 
 ## 2. Definition and Data Processing of Manufacturing Data
 
+(Data Link:https://www.kamp-ai.kr/aidataDetail?AI_SEARCH=&page=1&DATASET_SEQ=60&EQUIP_SEL=C003004&GUBUN_SEL=&FILE_TYPE_SEL=&WDATE_SEL=) 
+
 1. Definition of Manufacturing Data Specification, Attributes, and Types
     1. Introduction to Manufacturing Data
         1. data.csv: Process data collected at 1-second intervals by assignment number

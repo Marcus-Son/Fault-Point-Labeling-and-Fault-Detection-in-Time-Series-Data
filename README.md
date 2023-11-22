@@ -1,6 +1,6 @@
 # Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data
 
-## 1. Problem Definition
+## Problem Definition
 
 
 1. Background
@@ -25,19 +25,19 @@
     2. Objectives
         1. Propose a method to extract defect rates for each assignment number from existing collected data and label them.
         2. Develop a model using these labels that can trace the cause of defects at the point of occurrence, thereby improving quality control and reducing production costs.
-        3. Considering the situation where data distribution of data collected for assignment numbers in the heat treatment pickling process may differ, we aim to create a generalized model that the model learns from the labels provided in this project.
-        4. Utilize the results of the trained model in an explainable artificial intelligence to provide a reference point for finding the cause at the defect point.
+        3. Considering the situation where the distribution of data collected for assignment numbers in the heat treatment pickling process may differ, we aim to create a generalized model that learns from the labels provided in this project.
+        4. Utilize the results of the trained model in explainable artificial intelligence to provide a reference point for finding the cause at the defect point.
       
 
 
-## 2. 제조 데이터 정의 및 처리 과정
+## 2. Definition and Data Processing of Manufacturing Data
 
-1. 제조데이터 규격, 속성, 타입 정의
-    1. 제조데이터 소개
-        1. data.csv : 배정번호별 1초 간격 수집 공정 데이터
-            1. 데이터셋 구조 : 테이블 형식
-            2. 데이터 모양 : (2939722, 21)
-            3. 주요 변수 정의 및 타입
+1. Definition of Manufacturing Data Specification, Attributes, and Types
+    1. Introduction to Manufacturing Data
+        1. data.csv: Process data collected at 1-second intervals by assignment number
+            1. Dataset Structure: Tabular format
+            2. Data Shape: (2939722, 21)
+            3. Key Variable Definitions and Types
                 1. TAG_MIN(datetime) : 데이터가 수집된 시간
                 2. 배정번호(int) : 공정의 작업 지시 번호
                 3. 건조 1존~2존 OP(float) : 각 건조 온도를 유지하기 위한 출력량 (Output Percentage(%))
@@ -49,10 +49,10 @@
                 9. 소입로 온도 1~4 Zone(float) : 각 소입로 Zone의 온도 값
                 10. 솔트 컨베이어 온도 1~2 Zone(float) : 각 솔트 컨베이어 Zone의 온도 값
                 11. 솔트조 온도 1~2 Zone(float) : 각 솔트조 Zone의 온도 값
-          2. quality.csv : 배정번호별로의 열처리 품질 데이터
-              1. 데이터셋 구조 : 테이블 형식
-              2. 데이터 모양 : (136, 7)
-              3. 주요 변수 정의 및 타입
+          2. quality.csv: Heat treatment quality data by assignment number
+              1. Dataset Structure: Tabular format
+              2. Data Shape: (136, 7)
+              3. Key Variable Definitions and Types
                   1. 배정번호(int) : 공정의 작업 지시 번호
                   2. 작업일(datetime) : 공정 작업 날짜
                   3. 공정명(str) : 공정 이름
@@ -60,10 +60,10 @@
                   5. 양품수량(int) : 양품 생산 수량
                   6. 불량수량(int) : 불량 생산 수량
                   7. 총수량(int) : 전체 제품 생산 수량
-        3. train.csv : 열처리 공정 데이터의 통계량과 라벨 정보
-              1. 데이터셋 구조 : 테이블 형식
-              2. 데이터 모양 : (108, 38)
-              3. 주요 변수 정의 및 타입
+        3. train.csv : Summary statistics and label information of heat treatment process data
+              1. Dataset Structure: Tabular format
+              2. Data Shape: (2939722, 21)
+              3. Key Variable Definitions and Types
                   1. 건조 1존~2존 OP_Avg, 건조 1존~2존 OP_Std (float) : 각 건조 온도를 유지하기 위한 출력량(Output Percentage(%))에 대한 평균과 표준편차 
                   2. 건조로 온도 1~2 Zone_Avg, 건조로 온도 1~2 Zone_Std (float) : 각 건조로 Zone의 온도 값에 대한 평균과 표준편차
                   3. 세정기_Avg, 세정기_Std (float) : 세정기 온도 값에 대한 평균과 표준편차
@@ -72,23 +72,24 @@
                   6. 소입로 온도 1~4 Zone_Avg, 소입로 온도 1~4 Zone_Std (float) : 각 소입로 Zone의 온도 값에 대한 평균과 표준편차
                   7. 솔트 컨베이어 온도 1~2 Zone_Avg, 솔트 컨베이어 온도 1~2 Zone_Std (float) : 각 솔트 컨베이어 Zone의 온도 값에 대한 표준과 표준편차
                   8. 솔트조 온도 1~2 Zone_Avg, 솔트조 온도 1~2 Zone_Std (float) : 각 솔트조 Zone의 온도 값에 대한 평균과 표준편차
-2.전처리
+                
+2.Data Preprocessing
   1. data.csv
       1. EDA
-          1. 결측치 처리
-              1. data.csv에서 각 Column별 결측치 확인
-                  - 소입로1존 OP에서 결측치가 가장 많은 것으로 확인
-                  - 총 6043개의 결측치 확인
-              2. 배정번호를 기준으로 결측치 처리(Linear Interpolation)
-                  -  Linear Interpolation 사용 이유 : 배정번호별 시계열 정보를 유지하기 위해 선형 관계를 활용하여 데이터의 부드러운 흐름을 유지하고자 함
-          2. 시각화
-              1. 히스토그램 : 각 변수에 대한 분포 확인
+          1. Handling Missing Values
+              1. Check for missing values in each column of data.csv
+                  - It was observed that the "Inlet 1 Zone OP" column has the most missing values.
+                  - A total of 6043 missing values were identified.
+              2. Handle missing values based on assignment numbers (Linear Interpolation)
+                  - Reason for using Linear Interpolation: To maintain the time series information by assignment number, linear relationships are utilized to maintain a smooth flow of data.
+          2. Visualization
+              1. Histogram: Examine the distribution of each variable
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/120f90d2-523e-4d84-bbd2-69a7f7b994bc)
-              2. 박스 플롯 : 중앙값, 사분위 범위, 이상치 등 중요한 통계적 정보 확인
+              2. Box Plot: Check important statistical information such as median, quartile range, and outliers
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/b8211ab9-1279-4da9-aa82-f8cc9afd2d3b)
-              3. 라인 그래프 : 배정번호별 변수의 추세 파악
+              3. Line Graph: Observe the trends of variables by assignment number
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/9eeddcd9-fbbe-41f4-9068-f80a4993a74a)
-              4. 변수별 상관관계 확인
+              4. Correlation between variables
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/4585a396-f213-47b4-8733-75b538041f43)
-          3. 전처리
+          3. Data Preprocessing
    

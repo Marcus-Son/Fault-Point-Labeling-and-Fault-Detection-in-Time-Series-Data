@@ -98,7 +98,8 @@
   2. quality.csv
      1. Labeling
         1. Checking the Defect Rate (Defect Rate = Number of Defects / Total Quantity)
-        2. Identifying the Number of Outliers Signifying Defects per Assignment Numbe
+        2. Identifying the Number of Outliers Signifying Defects per Assignment Number
+           ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313)
            <img width="139" alt="제목 없음" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313">
 
         3. Selecting Outliers Based on the 'Outlier Score' According to the Number of Outliers in each Assignment Number

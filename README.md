@@ -77,7 +77,7 @@
                 
 2.Data Preprocessing
   1. data.csv
-      1. EDA
+     1. EDA
           1. Handling Missing Values
               1. Check for missing values in each column of data.csv
                   - It was observed that the "Inlet 1 Zone OP" column has the most missing values.
@@ -93,5 +93,15 @@
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/9eeddcd9-fbbe-41f4-9068-f80a4993a74a)
               4. Correlation between variables
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/4585a396-f213-47b4-8733-75b538041f43)
-          3. Data Preprocessin
+          3. Data Preprocessing
+             1. 상관관계가 높은 변수 제거
+  2. quality.csv
+     1. Labeling
+        1. 불량률 확인 (불량률 = 불량수량/총수량)
+        2. 배정번호 별 불량을 의미하는 이상치 개수 파악
+           <img width="145" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/d72ffc25-8903-43ca-be32-9b0bc44daee4">
+
+        4. 
+
+      
    

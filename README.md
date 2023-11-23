@@ -40,40 +40,40 @@
             1. Dataset Structure: Tabular format
             2. Data Shape: (2939722, 21)
             3. Key Variable Definitions and Types
-                1. TAG_MIN(datetime) : 데이터가 수집된 시간
-                2. 배정번호(int) : 공정의 작업 지시 번호
-                3. 건조 1존~2존 OP(float) : 각 건조 온도를 유지하기 위한 출력량 (Output Percentage(%))
-                4. 건조로 온도 1~2 Zone(float) : 각 건조로 Zone의 온도 값
-                5. 세정기(float) : 세정기 온도 값
-                6. 소입1~4존 OP(float) : 각 소입존 온도를 유지하기 위한 출력량 (Output Percentage(%))
-                7. 소입로 CP 값(float) : 침탄 가스의 침탄 능력량(%) Carbon Potention Value
-                8. 소입로 CP 모니터 값(float) : 모니터에 출력된 침탄 능력량???
-                9. 소입로 온도 1~4 Zone(float) : 각 소입로 Zone의 온도 값
-                10. 솔트 컨베이어 온도 1~2 Zone(float) : 각 솔트 컨베이어 Zone의 온도 값
-                11. 솔트조 온도 1~2 Zone(float) : 각 솔트조 Zone의 온도 값
+                1. TAG_MIN(datetime) : The time at which data was collected.
+                2. 배정번호(int) : The work order number for the process.
+                3. 건조 1존~2존 OP(float) : Output Percentage (%) to maintain each drying zone's temperature.
+                4. 건조로 온도 1~2 Zone(float) : Temperature values for each drying zone.
+                5. 세정기(float) : Temperature value of the cleaning machine.
+                6. 소입1~4존 OP(float) : Output Percentage (%) to maintain each inlet zone's temperature.
+                7. 소입로 CP 값(float) : Carbon Potention Value, representing the carburizing capacity of the carburizing gas.
+                8. 소입로 CP 모니터 값(float) : Monitor output of the carburizing gas's carburizing capacity.
+                9. 소입로 온도 1~4 Zone(float) : Temperature values for each inlet furnace zone.
+                10. 솔트 컨베이어 온도 1~2 Zone(float) : Temperature values for each salt conveyor zone.
+                11. 솔트조 온도 1~2 Zone(float) : Temperature values for each salt bath zone.
           2. quality.csv: Heat treatment quality data by assignment number
               1. Dataset Structure: Tabular format
               2. Data Shape: (136, 7)
               3. Key Variable Definitions and Types
-                  1. 배정번호(int) : 공정의 작업 지시 번호
-                  2. 작업일(datetime) : 공정 작업 날짜
-                  3. 공정명(str) : 공정 이름
-                  4. 설비명(str) : 설비 이름
-                  5. 양품수량(int) : 양품 생산 수량
-                  6. 불량수량(int) : 불량 생산 수량
-                  7. 총수량(int) : 전체 제품 생산 수량
+                  1. 배정번호(int) : The work order number for the process.
+                  2. 작업일(datetime) : The date of the process operation.
+                  3. 공정명(str) : The name of the process.    
+                  4. 설비명(str) : The name of the equipment.
+                  5. 양품수량(int) : The quantity of good products produced.
+                  6. 불량수량(int) : The quantity of defective products produced.
+                  7. 총수량(int) : The total quantity of products produced.
         3. train.csv : Summary statistics and label information of heat treatment process data
               1. Dataset Structure: Tabular format
               2. Data Shape: (2939722, 21)
               3. Key Variable Definitions and Types
-                  1. 건조 1존~2존 OP_Avg, 건조 1존~2존 OP_Std (float) : 각 건조 온도를 유지하기 위한 출력량(Output Percentage(%))에 대한 평균과 표준편차 
-                  2. 건조로 온도 1~2 Zone_Avg, 건조로 온도 1~2 Zone_Std (float) : 각 건조로 Zone의 온도 값에 대한 평균과 표준편차
-                  3. 세정기_Avg, 세정기_Std (float) : 세정기 온도 값에 대한 평균과 표준편차
-                  4. 소입1~4존 OP_Avg, 소입1~4존 OP_Std (float): 각 소입존 온도를 유지하기 위한 출력량 (Output Percentage(%))에 대한 평균과 표준편차
-                  5. 소입로 CP 값_Avg, 소입로 CP 값_Std (float) : 침탄 가스의 침탄 능력량(%) Carbon Potention Value에 대한 평균과 표준편차
-                  6. 소입로 온도 1~4 Zone_Avg, 소입로 온도 1~4 Zone_Std (float) : 각 소입로 Zone의 온도 값에 대한 평균과 표준편차
-                  7. 솔트 컨베이어 온도 1~2 Zone_Avg, 솔트 컨베이어 온도 1~2 Zone_Std (float) : 각 솔트 컨베이어 Zone의 온도 값에 대한 표준과 표준편차
-                  8. 솔트조 온도 1~2 Zone_Avg, 솔트조 온도 1~2 Zone_Std (float) : 각 솔트조 Zone의 온도 값에 대한 평균과 표준편차
+                  1. 건조 1존~2존 OP_Avg, 건조 1존~2존 OP_Std (float) : The average and standard deviation of the Output Percentage (%) to maintain each drying zone's temperature.
+                  2. 건조로 온도 1~2 Zone_Avg, 건조로 온도 1~2 Zone_Std (float) : The average and standard deviation of temperature values for each drying zone.
+                  3. 세정기_Avg, 세정기_Std (float) : The average and standard deviation of the cleaning machine's temperature value.
+                  4. 소입1~4존 OP_Avg, 소입1~4존 OP_Std (float): The average and standard deviation of the Output Percentage (%) to maintain each inlet zone's temperature.
+                  5. 소입로 CP 값_Avg, 소입로 CP 값_Std (float) : The average and standard deviation of the Carbon Potention Value, representing the carburizing capacity of the carburizing gas.
+                  6. 소입로 온도 1~4 Zone_Avg, 소입로 온도 1~4 Zone_Std (float) : The average and standard deviation of temperature values for each inlet furnace zone.
+                  7. 솔트 컨베이어 온도 1~2 Zone_Avg, 솔트 컨베이어 온도 1~2 Zone_Std (float) : The standard deviation of temperature values for each salt conveyor zone.
+                  8. 솔트조 온도 1~2 Zone_Avg, 솔트조 온도 1~2 Zone_Std (float) : The average and standard deviation of temperature values for each salt bath zone.
                 
 2.Data Preprocessing
   1. data.csv
@@ -94,14 +94,41 @@
               4. Correlation between variables
                  ![image](https://github.com/jeewonkimm2/Fault_Point_Labeling_and_Fault_Detection_in_Time_Series_Data/assets/108987773/4585a396-f213-47b4-8733-75b538041f43)
           3. Data Preprocessing
-             1. 상관관계가 높은 변수 제거
+             1. Removing Highly Correlated Variables
   2. quality.csv
      1. Labeling
-        1. 불량률 확인 (불량률 = 불량수량/총수량)
-        2. 배정번호 별 불량을 의미하는 이상치 개수 파악
-           <img width="145" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/d72ffc25-8903-43ca-be32-9b0bc44daee4">
+        1. Checking the Defect Rate (Defect Rate = Number of Defects / Total Quantity)
+        2. Identifying the Number of Outliers Signifying Defects per Assignment Numbe
+           <img width="139" alt="제목 없음" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/f322ba3d-f1de-4312-a09d-7300b07ce969">
+        3. Selecting Outliers Based on the 'Outlier Score' According to the Number of Outliers in each Assignment Number
+           - Outliers are related to product defects.
+           - The outlier score is a value that indicates how far a data point is from the upper bound and lower bound.
+             1. (subset < lower_bound) returns a boolean array indicating whether the data point is smaller than the lower bound, where True is 1 and False is 0.
+             2. (lower_bound - subset) represents the difference between the lower bound and each data point. Therefore, this calculation only considers the difference for data points smaller than the lower bound.
+             3. (subset > upper_bound) and (subset - upper_bound) perform calculations for data points larger than the upper bound.
+             4. The results of the above two calculations are summed to obtain the outlier score for each feature.
+             5. The outlier scores for each feature are added up to calculate the outlier score for a single data point.
+        4. Initializing Labels (Set to 0)
+        5. Saving the labeled dataset
+3. Modeling&Prediction
+   1. Splitting into Train, Valid, and Test Sets
+   2. Hyperparameter Optimization (XGBOOST Classifier)
+   3. Using the Optimal Hyperparameters to Find the Optimal Threshold for Model Performance Improvement (Validation)
+   4. Performing Testing
+4. Evaluation&Analysis
+   1. Evaluation
+      <img width="312" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/5aca0f2e-d6ab-4526-9276-f397bf34fcd4">
 
-        4. 
+   2. Analysis
+      1. Feature Importance
+         <img width="635" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/35cba275-6919-4715-9e45-f30d28624cf3">
+
+      2. shap.summary_plot
+         <img width="577" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/b80ab975-69bb-4a3e-9c3e-813900cdd7df">
+
+      3. shap.dependence_plot
+         <img width="482" alt="image" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/4c55f263-2ee5-4827-acdb-311f803b59e6">
+
 
       
    

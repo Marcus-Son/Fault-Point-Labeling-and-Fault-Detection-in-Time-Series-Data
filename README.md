@@ -101,9 +101,9 @@
         2. Identifying the Number of Outliers Signifying Defects per Assignment Number <br/>
            ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313)
 
-        3. Selecting Outliers Based on the 'Outlier Score' According to the Number of Outliers in each Assignment Number
+        3. Selecting Outliers Based on the 'Outlier Score' according to the Number of Outliers in each Assignment Number
            - Outliers are related to product defects.
-           - The outlier score is a value that indicates how far a data point is from the upper and lower bounds.
+           - The outlier score is a value that indicates how far a data point is from the upper and lower bounds. (Using IQR)
              1. (subset < lower_bound) returns a boolean array indicating whether the data point is smaller than the lower bound, where True is 1 and False is 0.
              2. (lower_bound - subset) represents the difference between the lower bound and each data point. Therefore, this calculation only considers the difference for data points smaller than the lower bound.
              3. (subset > upper_bound) and (subset - upper_bound) perform calculations for data points larger than the upper bound.

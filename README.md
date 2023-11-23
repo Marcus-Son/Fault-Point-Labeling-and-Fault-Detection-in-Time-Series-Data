@@ -1,6 +1,6 @@
 # Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data
 
-## Problem Definition
+## 1.Problem Definition
 
 
 1. Background

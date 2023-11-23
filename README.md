@@ -98,7 +98,7 @@
   2. quality.csv
      1. Labeling
         1. Checking the Defect Rate (Defect Rate = Number of Defects / Total Quantity)
-        2. Identifying the Number of Outliers Signifying Defects per Assignment Number
+        2. Identifying the Number of Outliers Signifying Defects per Assignment Number <br/>
            ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313)
 
         3. Selecting Outliers Based on the 'Outlier Score' According to the Number of Outliers in each Assignment Number
@@ -117,17 +117,17 @@
    3. Using the Optimal Hyperparameters to Find the Optimal Threshold for Model Performance Improvement (Validation)
    4. Performing Testing
 4. Evaluation&Analysis
-   1. Evaluation
+   1. Evaluation <br/>
       ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/76cffe8b-b58c-48ef-ae71-66067be2f028)
         
    2. Analysis
-      1. Feature Importance
+      1. Feature Importance <br/>
          ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/6ebe2334-a671-49fb-adcd-1cd4e725ab9c)
 
-      2. shap.summary_plot
+      2. shap.summary_plot <br/> 
          ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e5746786-23cd-4ac5-b532-40df3fdddf6f)
 
-      3. shap.dependence_plot
+      3. shap.dependence_plot <br/>
          ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/431ecb4a-f858-4fc9-b7a2-26678812bb13)
 
       

@@ -100,7 +100,6 @@
         1. Checking the Defect Rate (Defect Rate = Number of Defects / Total Quantity)
         2. Identifying the Number of Outliers Signifying Defects per Assignment Number
            ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313)
-           <img width="139" alt="제목 없음" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e816cd24-9217-40f9-8691-6b254c05c313">
 
         3. Selecting Outliers Based on the 'Outlier Score' According to the Number of Outliers in each Assignment Number
            - Outliers are related to product defects.
@@ -119,17 +118,17 @@
    4. Performing Testing
 4. Evaluation&Analysis
    1. Evaluation
-      <img width="291" alt="제목 없음1" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/76cffe8b-b58c-48ef-ae71-66067be2f028">
-
+      ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/76cffe8b-b58c-48ef-ae71-66067be2f028)
+        
    2. Analysis
       1. Feature Importance
-         <img width="561" alt="제목 없음2" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/6ebe2334-a671-49fb-adcd-1cd4e725ab9c">
+         ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/6ebe2334-a671-49fb-adcd-1cd4e725ab9c)
 
       2. shap.summary_plot
-         <img width="580" alt="제목 없음3" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e5746786-23cd-4ac5-b532-40df3fdddf6f">
+         ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/e5746786-23cd-4ac5-b532-40df3fdddf6f)
 
       3. shap.dependence_plot
-         <img width="488" alt="제목 없음4" src="https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/431ecb4a-f858-4fc9-b7a2-26678812bb13">
+         ![image](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/431ecb4a-f858-4fc9-b7a2-26678812bb13)
 
       
    

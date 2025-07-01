@@ -8,11 +8,14 @@
 3. [Data Preprocessing](#data-preprocessing)
 4. [Modeling and Prediction](#modeling-and-prediction)
 5. [Evaluation and Analysis](#evaluation-and-analysis)
+6. [My Contribution](#my-contribution)
+7. [Limitations & Future Work](#limitations--future-work)
+8. [Contact](#contact)
 
 ## Problem Definition
 
 ### 1. Background
-Heat treatment is a critical process in the metal industry, with many companies running 24-hour operations to save on energy costs. However, traditional heat treatment lines lack real-time monitoring and quality control, leading to post-production defects and increased costs. This project aims to address these issues by developing a model that can detect faults in real-time from time series data.
+Heat treatment is a critical process in the metal industry, with many companies operating 24 hours a day to save energy costs. However, traditional heat treatment lines lack real-time monitoring and quality control, often leading to post-production defects and increased costs. This project addresses these issues by developing a machine learning model to detect faults in real time from process time series data.
 
 ### 2. Objectives
 - Develop a model to label and detect defects in the heat treatment process in real time.
@@ -83,3 +86,32 @@ The XGBoost model was evaluated using standard classification metrics. Below are
   
   - **SHAP Dependence Plot**: Explores how a feature affects the model's predictions across the dataset.
     ![SHAP Dependence Plot](https://github.com/ShawnSon-hub/Fault-Point-Labeling-and-Fault-Detection-in-Time-Series-Data/assets/124177883/431ecb4a-f858-4fc9-b7a2-26678812bb13)
+
+## My Contribution
+
+I, Minhyeok Son, was primarily responsible for the **Modeling and Prediction** and **Evaluation and Analysis** stages of this project. My main contributions include:
+
+- Developed and optimized the XGBoost classifier for fault detection.
+- Performed all model training, validation, and hyperparameter tuning.
+- Applied explainable AI techniques, including feature importance analysis and SHAP visualizations.
+- Conducted comprehensive evaluation of model performance using standard classification metrics.
+- Analyzed results and extracted actionable insights to improve the fault detection process.
+  
+---
+
+## Limitations & Future Work
+
+- **Limited Model Diversity:** Only the XGBoost classifier was explored. Incorporating other models (e.g., LSTM, Random Forest, deep learning architectures) could further improve detection accuracy and robustness.
+- **Generalizability:** The solution was developed for a specific heat treatment process; additional validation on other industrial datasets and processes would be valuable.
+- **Data Quality:** Addressing possible sensor errors, additional noise reduction, and handling extreme outliers could enhance model reliability.
+- **Real-Time Deployment:** Future work includes integrating the trained model into an actual manufacturing environment for real-time defect detection and automated process feedback.
+- **Explainability:** Continued work on interpretable AI (e.g., causal inference, process-level explanations) is planned to assist plant operators with root-cause analysis.
+
+---
+
+## Contact
+
+For any questions or collaboration opportunities, feel free to contact me:
+
+**Minhyeok Son**  
+Email: shawn22587@gmail.com  
